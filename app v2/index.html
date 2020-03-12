@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Pizza Shop</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+		integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:700|Sintony:400,700" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+	<header id="header" class="header">
+		<div class="main-header">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3">
+						<img id="logo"src="img/logo.png" alt="Pizza Shop">
+					</div>
+					<div class="col-lg-6 nav-items">
+						<nav>
+							<ul class="menu d-flex justify-content-between">
+								<li class="menu__item">
+									<a href="#">
+										О нас
+									</a>
+								</li>
+								<li class="menu__item">
+									<a href="#">
+										Пицца
+									</a>
+								</li>
+								<li class="menu__item">
+									<a href="#">
+										Салаты
+									</a>
+								</li>
+								<li class="menu__item">
+									<a href="#">
+										Напитки
+									</a>
+								</li>
+								<li class="menu__item">
+									<a href="#">
+										Блог
+									</a>
+								</li>
+								<li class="menu__item">
+									<a href="#">
+										Десерты
+									</a>
+								</li>
+								<li class="menu__item">
+									<a href="#">
+										Контакты
+									</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+					<div class="col-lg-3">
+						<button class="construct cta d-flex justify-content-center">
+							<span class="book__icon"></span>
+							Создай пиццу
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="offer">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="title">
+							<h1 class="title__heading">
+								Лучшая пицца
+							</h1>
+							<p class="title__desc">
+								из
+								<span>
+									Pizza Shop
+								</span>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<section id="call" class="call">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+
+					<div class="phone d-flex ml-auto mr-auto">
+						<div class="phone__text">
+							Телефон
+							<span class="yellow">
+								для доставки
+							</span>
+						</div>
+						<div class="phone__digits">
+							<a href="tel:+380444469506">+38(044)446 95 06</a>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="popup-container">
+		<div class="popup">
+			<div class="popup-alignr"></div>
+			<div id="constructor__wrapper">
+				<button type="button" class="popup-close">x</button>
+				<div class="left-bar-constructor">
+					<div id="pizza" class="main-constructor">
+						<div>
+							<img id="pizza" src="img/constructor/klassicheskij-bortik_1556622914630.png" alt="pizza layer">
+						</div>
+						<div class="order__block">
+							<div id ="cart" class = "order__form order active">
+								<h2>Ваш заказ</h2>
+								  <table>
+									<tr>
+									  <td id = "sizeName"></td>
+									  <td id = "sizePrice"></td>
+									</tr>
+								  </table>
+								  <div id="totalPrice">Цена шедевра: <output></output> грн</div>
+								  <button type="button" class ="button" id = "continue">Продолжить</button>
+								</div>   
+								<div id = "ordeDetails" class = "order__form contact">
+								  <h2>Контактные данные</h2>
+								  <form action="" method="post" target="_blank" name="f1">
+							
+									<input type="text" placeholder="Ваше имя" name="f1" required id = "name"><br>
+									<input type="email" placeholder="Ваш email" name="f1" required id = "email"><br>
+									<input type="tel" required name="f1" id="tel" placeholder="Ваш номер телефона">
+									<div id = 'message'></div> 
+									<button type="submit" class ="button" disabled id = "sendOrder">Заказать</button>
+								  </form>
+								</div>
+							</div>
+						</div>
+						</div>
+
+
+				<div class="choice right-bar-constructor ">
+					<div class="choice__wraper">
+						<div class="accordion">Выберите размер пиццы</div>
+						<div class="panel pizza__size">
+
+							<form>
+								<input type="radio" id="min" name="size" value="Маленькая">
+								<label for="min">Маленькая</label>
+
+								<input type="radio" id="mid" name="size" value="Средняя">
+								<label for="mid">Средняя</label>
+
+								<input type="radio" id="max" name="size" value="Большая">
+								<label for="max">Большая</label>
+							</form>
+						</div>
+
+								<div class="accordion">Выберите соус</div>
+								<div class="panel ingredients">
+							
+									<ul>
+										<li>
+											<img id="1" draggable="true" src="img/constructor/classic.png" alt="">
+											<div id="classic">Классический</div>
+										</li>
+										<li>
+											<img id="2" draggable="true" src="img/constructor/georgian.png" alt="">
+											<div id="georgian">Грузинский</div>
+										</li>
+										<li>
+											<img id="3" draggable="true" src="img/constructor/cheeseSous.png" alt="">
+											<div id="cheeseSous">Сырный</div>
+										</li>	
+									</ul>
+								</div>
+								<div class="accordion">Выберите топинги</div>
+								<div class="panel ingredients">
+									<ul>
+										<li>
+										  <img id = "4" draggable="true" src="img/constructor/mocarela.png" alt="">
+										  <div id = "mocarela">Моцарелла</div>
+										</li>
+										<li>
+										  <img id = "5" draggable="true" src="img/constructor/parmesan.png" alt="">
+										  <div id = "parmesan">Пармезан</div>
+										</li>
+										<li>
+										  <img id = "6" draggable="true" src="img/constructor/cheese.png" alt="">
+										  <div id = "cheese">Сыр</div>
+										</li>
+										<li>
+										  <img id = "7" draggable="true" src="img/constructor/meat.png" alt="">
+										  <div id = "meat">Мясо</div>
+										</li>
+										<li>
+										  <img id = "8" draggable="true" src="img/constructor/tomato.png" alt="">
+										  <div id = "tomato">Помидоры</div>
+										</li>
+										<li>
+										  <img id = "9" draggable="true" src="img/constructor/mushrooms.png" alt="">
+										  <div id = "mushrooms">Грибы</div>
+										</ul>
+
+			</div>
+			<hr>
+		</div>
+	</section>
+
+	<section id="about" class="about">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="history">
+						<h2 class="history__title">
+							О нас
+						</h2>
+						<p class="history__text">
+							Пицца от Pizza Shop пользуется любовью ценителей итальянской кухни с 2010 года. 
+							Каждый день в Pizza Shop можно заказать самую свежую пиццу для доставки в офисы и домой.
+						</p>
+						<a href="#" class="cta history__button">
+							Больше о нас
+						</a>
+					</div>
+				</div>
+				<div class="col-lg-3">
+					<div class="food-images food-images-down">
+						<img src="img/food1.jpg" alt="Pasta" class="food-images__item">
+						<img src="img/food2.jpg" alt="Chicken" class="food-images__item">
+					</div>
+				</div>
+				<div class="col-lg-3">
+					<div class="food-images">
+						<img src="img/food3.jpg" alt="Meat" class="food-images__item">
+						<img src="img/food4.jpg" alt="Fish" class="food-images__item">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="special" class="special">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-lg-12">
+					<h2 class="special-title">
+						Акции
+					</h2>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="food">
+						<img src="img/dish1.jpg" alt="Dish 1" class="food__img img-fluid">
+						<h3 class="food__title">
+							Food Name one
+						</h3>
+						<p class="food__desc">
+							printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
+							ever since the 1500s, when an unknown printer took a galley of type and scrambled.
+						</p>
+						<div class="food__details d-flex">
+							<div class="food__del">
+								Home
+								<span>
+									Delivary
+								</span>
+							</div>
+							<div class="food__phone">
+								1-008 005 006
+							</div>
+							<div class="food__price yellow ml-auto">
+								<sup><small>$</small></sup>
+								89.00
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="food">
+						<img src="img/dish.jpg" alt="Dish 1" class="food__img img-fluid">
+						<h3 class="food__title">
+							Food Name one
+						</h3>
+						<p class="food__desc">
+							printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
+							ever since the 1500s, when an unknown printer took a galley of type and scrambled.
+						</p>
+						<div class="food__details d-flex">
+							<div class="food__del">
+								Home
+								<span>
+									Delivary
+								</span>
+							</div>
+							<div class="food__phone">
+								1-008 005 006
+							</div>
+							<div class="food__price yellow ml-auto">
+								<sup><small>$</small></sup>
+								89.00
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer id="footer" class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<ul class="socials d-flex justify-content-center">
+						<li class="socials__item socials__item_fb">
+							<a href="#"></a>
+						</li>
+						<li class="socials__item socials__item_tw">
+							<a href="#"></a>
+						</li>
+						<li class="socials__item socials__item_g">
+							<a href="#"></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-4">
+					<div class="line"></div>
+				</div>
+				<div class="col-lg-4">
+					<div class="credits">
+						2020 Pizza Shop© All rights reserved
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="line"></div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script src="js/main.js"></script>
+</body>
+</html>
