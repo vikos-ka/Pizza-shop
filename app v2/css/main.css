@@ -273,10 +273,12 @@ a:hover, a {
 	-webkit-overflow-scrolling: touch;
 	overflow-y: auto;
 	outline: 0;
+	box-sizing: border-box;
 }
 
 .popup-container.active {
-    display: block;
+	display: block;
+	
 }
 
 
@@ -356,7 +358,7 @@ a:hover, a {
 	width: 100%;
 }
 
-.active:after {
+.accordion.active:after {
     content: "\2212";
 }
 
@@ -483,8 +485,8 @@ button.button {
 }
 
 .order__form button{
-	margin: 0;
-	
+
+	margin: 25px auto;
 }
   .order__form h2{
 	font-family: 'Roboto', sans-serif;
@@ -496,7 +498,7 @@ button.button {
 .order span {
 	font-size: 1.2em;
 	display: inline-block;
-	margin: 5px;
+	margin: 0 5px;
 }
 
 .order span {
@@ -586,14 +588,6 @@ button.button {
   }
 
 
-
-
-
-
-
-
-
-
 /*Main Content */
 
 .history {
@@ -647,17 +641,10 @@ button.button {
 
 .food__img {
 	margin-bottom: 45px;
+	width: 100%;
+	height: 540px;
 }
 
-.food__title {
-	font-size: 26px;
-	margin-bottom: 10px;
-}
-
-.food__desc {
-	font-size: 14px;
-	padding: 0 50px;
-}
 
 .food__details {
 	border-top: 1px solid #e1e1e1;
@@ -683,12 +670,8 @@ button.button {
 .food__phone {
 	font-size: 26px;
 	font-family: 'Playfair Display', serif;
+	margin: 0 auto;
 
-}
-
-.food__price {
-	font-size: 30px;
-	font-family: 'Playfair Display', serif;
 }
 
 .footer {
